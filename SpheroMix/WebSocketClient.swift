@@ -20,7 +20,7 @@ class WebSocketClient: ObservableObject {
     
     var routes = [String:NWWebSocket]()
     var ipAdress: String = "192.168.1.99:8080"
-    @Published var receivedMessages: [Message] = []
+    @Published var receivedMessage: String = ""
     
     func connectTo(route:String) -> Bool {
         let socketURL = URL(string: "ws://\(ipAdress)/\(route)")
@@ -90,7 +90,7 @@ extension WebSocketClient: WebSocketConnectionDelegate {
     func webSocketDidReceiveMessage(connection: WebSocketConnection, string: String) {
         // Respond to a WebSocket connection receiving a `String` message
         print("WebSocket received message: \(string)")
-        self.receivedMessages.append(Message(content: string))
+        self.receivedMessage = string
     }
 
     func webSocketDidReceiveMessage(connection: WebSocketConnection, data: Data) {

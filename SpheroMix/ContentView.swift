@@ -14,23 +14,32 @@ struct ContentView: View {
     @State var connectedToServer: Bool = false
     var body: some View {
         VStack {
-            if !spheroIsConnected {
-                Button("Connect") {
-                    SharedToyBox.instance.searchForBoltsNamed(spherosNames) { err in
-                        if err == nil {
-                            print("Connected")
-                            self.spheroIsConnected.toggle()
-                        }
-                    }
-                }
-            }
-            
             if spheroIsConnected {
                 SpheroControlView()
             }
+            
+            if !spheroIsConnected {
+                Text("Sphero not connected")
+            }
+            
+            if !connectedToServer {
+                Text("Not connected to WS Server")
+            }
         }
         .onAppear {
-            connectedToServer = wsClient.connectTo(route:"mixer")
+            connectedToServer = wsClient.connectTo(route:"phoneMixer")
+            wsClient.sendMessage("Phone sends hello from \(UIDevice.current.name)", toRoute: "phoneMixer")
+            SharedToyBox.instance.searchForBoltsNamed(spherosNames) { err in
+                if err == nil {
+                    print("Connected to sphero")
+                    self.spheroIsConnected.toggle()
+                }
+            }
+        }
+        .onChange(of: wsClient.receivedMessage) {
+            if spheroIsConnected && connectedToServer {
+                print("Received message from server: \(wsClient.receivedMessage)")
+            }
         }
         .padding()
     }

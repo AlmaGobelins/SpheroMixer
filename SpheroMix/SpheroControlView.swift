@@ -9,17 +9,18 @@ import SwiftUI
 
 struct SpheroControlView: View {
     private var controller = SpheroRotationController(bolt: SharedToyBox.instance.bolts[0])
-    
+    @State private var date = Date.now
     var body: some View {
         VStack(spacing: 20) {
-           Button(action: { controller.rotateInPlace(duration: 5.0, speed: 128) }) {
-               Text("Start spinning")
-                   .font(.title)
-                   .padding()
-                   .background(Color.blue)
-                   .foregroundColor(.white)
-                   .cornerRadius(10)
-           }
+            Text("\(date.formatted())")
+               .font(.title)
+               .padding()
+               .background(Color.blue)
+               .foregroundColor(.white)
+               .cornerRadius(10)
+               .onChange(of: WebSocketClient.shared.receivedMessage) {
+                   self.date = Date.now
+               }
         }
         .padding()
     }
