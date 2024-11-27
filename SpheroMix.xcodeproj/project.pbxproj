@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DBCB26122CF748F000FBAF29 /* NWWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = DBCB26112CF748F000FBAF29 /* NWWebSocket */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBCB259F2CF7454000FBAF29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBCB25862CF7453F00FBAF29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBCB258D2CF7453F00FBAF29;
+			remoteInfo = SpheroMix;
+		};
+		DBCB25A92CF7454000FBAF29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBCB25862CF7453F00FBAF29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBCB258D2CF7453F00FBAF29;
+			remoteInfo = SpheroMix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DBCB258E2CF7453F00FBAF29 /* SpheroMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpheroMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBCB259E2CF7454000FBAF29 /* SpheroMixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpheroMixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBCB25A82CF7454000FBAF29 /* SpheroMixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpheroMixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DBCB26142CF749CA00FBAF29 /* Exceptions for "SpheroMix" folder in "SpheroMix" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DBCB258D2CF7453F00FBAF29 /* SpheroMix */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DBCB25902CF7453F00FBAF29 /* SpheroMix */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DBCB26142CF749CA00FBAF29 /* Exceptions for "SpheroMix" folder in "SpheroMix" target */,
+			);
+			path = SpheroMix;
+			sourceTree = "<group>";
+		};
+		DBCB25A12CF7454000FBAF29 /* SpheroMixTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SpheroMixTests;
+			sourceTree = "<group>";
+		};
+		DBCB25AB2CF7454000FBAF29 /* SpheroMixUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SpheroMixUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBCB258B2CF7453F00FBAF29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBCB26122CF748F000FBAF29 /* NWWebSocket in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCB259B2CF7454000FBAF29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCB25A52CF7454000FBAF29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBCB25852CF7453F00FBAF29 = {
+			isa = PBXGroup;
+			children = (
+				DBCB25902CF7453F00FBAF29 /* SpheroMix */,
+				DBCB25A12CF7454000FBAF29 /* SpheroMixTests */,
+				DBCB25AB2CF7454000FBAF29 /* SpheroMixUITests */,
+				DBCB258F2CF7453F00FBAF29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBCB258F2CF7453F00FBAF29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBCB258E2CF7453F00FBAF29 /* SpheroMix.app */,
+				DBCB259E2CF7454000FBAF29 /* SpheroMixTests.xctest */,
+				DBCB25A82CF7454000FBAF29 /* SpheroMixUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBCB258D2CF7453F00FBAF29 /* SpheroMix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBCB25B22CF7454000FBAF29 /* Build configuration list for PBXNativeTarget "SpheroMix" */;
+			buildPhases = (
+				DBCB258A2CF7453F00FBAF29 /* Sources */,
+				DBCB258B2CF7453F00FBAF29 /* Frameworks */,
+				DBCB258C2CF7453F00FBAF29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DBCB25902CF7453F00FBAF29 /* SpheroMix */,
+			);
+			name = SpheroMix;
+			packageProductDependencies = (
+				DBCB26112CF748F000FBAF29 /* NWWebSocket */,
+			);
+			productName = SpheroMix;
+			productReference = DBCB258E2CF7453F00FBAF29 /* SpheroMix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBCB259D2CF7454000FBAF29 /* SpheroMixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBCB25B52CF7454000FBAF29 /* Build configuration list for PBXNativeTarget "SpheroMixTests" */;
+			buildPhases = (
+				DBCB259A2CF7454000FBAF29 /* Sources */,
+				DBCB259B2CF7454000FBAF29 /* Frameworks */,
+				DBCB259C2CF7454000FBAF29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBCB25A02CF7454000FBAF29 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DBCB25A12CF7454000FBAF29 /* SpheroMixTests */,
+			);
+			name = SpheroMixTests;
+			packageProductDependencies = (
+			);
+			productName = SpheroMixTests;
+			productReference = DBCB259E2CF7454000FBAF29 /* SpheroMixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DBCB25A72CF7454000FBAF29 /* SpheroMixUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBCB25B82CF7454000FBAF29 /* Build configuration list for PBXNativeTarget "SpheroMixUITests" */;
+			buildPhases = (
+				DBCB25A42CF7454000FBAF29 /* Sources */,
+				DBCB25A52CF7454000FBAF29 /* Frameworks */,
+				DBCB25A62CF7454000FBAF29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBCB25AA2CF7454000FBAF29 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DBCB25AB2CF7454000FBAF29 /* SpheroMixUITests */,
+			);
+			name = SpheroMixUITests;
+			packageProductDependencies = (
+			);
+			productName = SpheroMixUITests;
+			productReference = DBCB25A82CF7454000FBAF29 /* SpheroMixUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBCB25862CF7453F00FBAF29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					DBCB258D2CF7453F00FBAF29 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					DBCB259D2CF7454000FBAF29 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = DBCB258D2CF7453F00FBAF29;
+					};
+					DBCB25A72CF7454000FBAF29 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = DBCB258D2CF7453F00FBAF29;
+					};
+				};
+			};
+			buildConfigurationList = DBCB25892CF7453F00FBAF29 /* Build configuration list for PBXProject "SpheroMix" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBCB25852CF7453F00FBAF29;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DBCB26102CF748F000FBAF29 /* XCRemoteSwiftPackageReference "NWWebSocket" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DBCB258F2CF7453F00FBAF29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBCB258D2CF7453F00FBAF29 /* SpheroMix */,
+				DBCB259D2CF7454000FBAF29 /* SpheroMixTests */,
+				DBCB25A72CF7454000FBAF29 /* SpheroMixUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBCB258C2CF7453F00FBAF29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCB259C2CF7454000FBAF29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCB25A62CF7454000FBAF29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBCB258A2CF7453F00FBAF29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCB259A2CF7454000FBAF29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCB25A42CF7454000FBAF29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBCB25A02CF7454000FBAF29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBCB258D2CF7453F00FBAF29 /* SpheroMix */;
+			targetProxy = DBCB259F2CF7454000FBAF29 /* PBXContainerItemProxy */;
+		};
+		DBCB25AA2CF7454000FBAF29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBCB258D2CF7453F00FBAF29 /* SpheroMix */;
+			targetProxy = DBCB25A92CF7454000FBAF29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DBCB25B02CF7454000FBAF29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DBCB25B12CF7454000FBAF29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBCB25B32CF7454000FBAF29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpheroMix/Preview Content\"";
+				DEVELOPMENT_TEAM = LK2358MPL8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpheroMix/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We would like to use bluetooth to find spheros near you";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.SpheroMix";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBCB25B42CF7454000FBAF29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpheroMix/Preview Content\"";
+				DEVELOPMENT_TEAM = LK2358MPL8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpheroMix/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We would like to use bluetooth to find spheros near you";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.SpheroMix";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DBCB25B62CF7454000FBAF29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LK2358MPL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.SpheroMixTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpheroMix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpheroMix";
+			};
+			name = Debug;
+		};
+		DBCB25B72CF7454000FBAF29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LK2358MPL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.SpheroMixTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpheroMix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpheroMix";
+			};
+			name = Release;
+		};
+		DBCB25B92CF7454000FBAF29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LK2358MPL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.SpheroMixUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpheroMix;
+			};
+			name = Debug;
+		};
+		DBCB25BA2CF7454000FBAF29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LK2358MPL8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.mathieu-dubart.SpheroMixUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpheroMix;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBCB25892CF7453F00FBAF29 /* Build configuration list for PBXProject "SpheroMix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBCB25B02CF7454000FBAF29 /* Debug */,
+				DBCB25B12CF7454000FBAF29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBCB25B22CF7454000FBAF29 /* Build configuration list for PBXNativeTarget "SpheroMix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBCB25B32CF7454000FBAF29 /* Debug */,
+				DBCB25B42CF7454000FBAF29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBCB25B52CF7454000FBAF29 /* Build configuration list for PBXNativeTarget "SpheroMixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBCB25B62CF7454000FBAF29 /* Debug */,
+				DBCB25B72CF7454000FBAF29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBCB25B82CF7454000FBAF29 /* Build configuration list for PBXNativeTarget "SpheroMixUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBCB25B92CF7454000FBAF29 /* Debug */,
+				DBCB25BA2CF7454000FBAF29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBCB26102CF748F000FBAF29 /* XCRemoteSwiftPackageReference "NWWebSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pusher/NWWebSocket";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBCB26112CF748F000FBAF29 /* NWWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBCB26102CF748F000FBAF29 /* XCRemoteSwiftPackageReference "NWWebSocket" */;
+			productName = NWWebSocket;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DBCB25862CF7453F00FBAF29 /* Project object */;
+}
