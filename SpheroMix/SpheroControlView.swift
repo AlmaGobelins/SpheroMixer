@@ -19,7 +19,7 @@ struct SpheroControlView: View {
                .foregroundColor(.white)
                .cornerRadius(10)
                .onChange(of: WebSocketClient.shared.receivedMessage) {
-                   controller.rotateInPlace(duration: 5, speed: 255) //Max value is 255 for speed
+                   controller.goFullSpeedAhead(duration: 5.0) //Max value is 255 for speed
                }
         }
         .padding()

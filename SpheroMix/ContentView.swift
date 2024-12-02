@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var spherosNames: [String] = ["SB-C7A8"]
+    var spherosNames: [String] = ["SB-42C1"] //SB-C7A8 - SB-42C1
     @State private var spheroIsConnected: Bool = false
     @ObservedObject var wsClient = WebSocketClient.shared
     @State var connectedToServer: Bool = false
