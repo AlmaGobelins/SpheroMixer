@@ -61,13 +61,13 @@ class SpheroV2ToyCore: NSObject, CBPeripheralDelegate {
     private var asyncListeners = [AsyncWeakWrapper]()
     
     public func addAsyncListener(_ asyncListener: ToyCoreCommandListener) {
-        if !asyncListeners.contains() { $0 === asyncListener } {
+        if !asyncListeners.contains(where: { $0 === asyncListener }) {
             asyncListeners.append(AsyncWeakWrapper(value: asyncListener))
         }
     }
     
     public func removeAsyncListener(_ asyncListener: ToyCoreCommandListener) {
-        guard let index = asyncListeners.index(where: {$0 === asyncListener }) else { return }
+        guard let index = asyncListeners.firstIndex(where: {$0 === asyncListener }) else { return }
         asyncListeners.remove(at: index)
     }
     

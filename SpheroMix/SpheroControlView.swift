@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SpheroControlView: View {
-    private var controller = SpheroRotationController(bolt: SharedToyBox.instance.bolts[0])
-    private let flipDetector = FlipDetector(toyBox: SharedToyBox.instance)
-    
+    private var controller = SpheroRotationController(bolt: SharedToyBox.instance.bolts[0]) // color: blue
+    private let shakeDetector = ShakeDetector(bolt: SharedToyBox.instance.bolts[SharedToyBox.instance.bolts.count-1]) // color: red
+
     var body: some View {
         VStack(spacing: 20) {
             Text("Contrôle mixeur")
@@ -18,11 +18,15 @@ struct SpheroControlView: View {
                .padding()
                .foregroundColor(.white)
                .cornerRadius(10)
-               .onChange(of: WebSocketClient.shared.receivedMessage) {
-                   controller.goFullSpeedAhead(duration: 5.0) //Max value is 255 for speed
-               }
         }
         .padding()
+        .onAppear {
+            self.shakeDetector.onShakeDetected = {
+                controller.goFullSpeedAhead(duration: 1.0)
+            }
+            
+            self.shakeDetector.startMonitoring()
+        }
     }
 }
 

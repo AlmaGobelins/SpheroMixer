@@ -8,19 +8,17 @@
 import SwiftUI
 
 class SpheroRotationController {
-    var bolt: BoltToy?
+    var bolt: BoltToy
     private var timer: Timer?
     
-    init(bolt: BoltToy? = nil) {
+    init(bolt: BoltToy) {
+        bolt.setFrontLed(color: .blue)
+        bolt.setBackLed(color: .blue)
+        bolt.setMainLed(color: .blue)
         self.bolt = bolt
-        self.bolt?.setMainLed(color: .blue)
     }
     
     func goFullSpeedAhead(duration: TimeInterval) {
-        guard let bolt = bolt else {
-            print("Sphero non connecté")
-            return
-        }
         
         // Désactiver la stabilisation
         bolt.setStabilization(state: .off)
@@ -35,8 +33,6 @@ class SpheroRotationController {
     }
     
     func stop() {
-        guard let bolt = bolt else { return }
-        
         timer?.invalidate()
         timer = nil
         

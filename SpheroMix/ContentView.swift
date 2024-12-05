@@ -8,41 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    var spherosNames: [String] = ["SB-A729", "SB-C7A8"] //SB-C7A8 - SB-42C1 - SB A729
-    @State private var spherosAreConnected: Bool = false
+    var spherosNames: [String] = ["SB-A729", "SB-C7A8"] //SB-C7A8 - SB-42C1 - SB-A729
+    @State private var spheroIsConnected: Bool = false
+    @State private var displayView: Bool = false
+    
     @ObservedObject var wsClient = WebSocketClient.shared
-    @State var connectedToServer: Bool = false
     var body: some View {
-        NavigationStack {
-            if spherosAreConnected {
+        VStack {
+            if displayView {
                 SpheroControlView()
             }
             
-            if !spherosAreConnected {
-                Text("Spheros not connected")
-            }
-            
-            if !connectedToServer {
-                Text("Not connected to WS Server")
-            }
-        }
-        .onAppear {
-            connectedToServer = wsClient.connectTo(route:"phoneMixer")
-            wsClient.sendMessage("Phone sends hello from \(UIDevice.current.name)", toRoute: "phoneMixer")
-            SharedToyBox.instance.searchForBoltsNamed(spherosNames) { err in
-                if err == nil {
-                    print("Connected to sphero")
-                    self.spherosAreConnected = true
+            if !displayView {
+                Button("Display view") {
+                    self.displayView.toggle()
                 }
             }
             
-            let _ = SharedToyBox.instance.bolts.map{
-                print("connected to sphero : \($0.identifier)")
-            }
         }
-        .onChange(of: wsClient.receivedMessage) {
-            if spherosAreConnected && connectedToServer {
-                print("Received message from server: \(wsClient.receivedMessage)")
+        .onAppear {
+//            connectedToServer = wsClient.connectTo(route:"phoneMixer")
+//            wsClient.sendMessage("Phone sends hello from \(UIDevice.current.name)", toRoute: "phoneMixer")
+            SharedToyBox.instance.searchForBoltsNamed(spherosNames) { err in
+                if err == nil {
+                    print("Connected to sphero")
+                }
             }
         }
         .padding()
