@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    var spherosNames: [String] = ["SB-42C1"] //SB-C7A8 - SB-42C1
-    @State private var spheroIsConnected: Bool = false
+    var spherosNames: [String] = ["SB-A729", "SB-C7A8"] //SB-C7A8 - SB-42C1 - SB A729
+    @State private var spherosAreConnected: Bool = false
     @ObservedObject var wsClient = WebSocketClient.shared
     @State var connectedToServer: Bool = false
     var body: some View {
-        VStack {
-            if spheroIsConnected {
+        NavigationStack {
+            if spherosAreConnected {
                 SpheroControlView()
             }
             
-            if !spheroIsConnected {
-                Text("Sphero not connected")
+            if !spherosAreConnected {
+                Text("Spheros not connected")
             }
             
             if !connectedToServer {
@@ -32,12 +32,16 @@ struct ContentView: View {
             SharedToyBox.instance.searchForBoltsNamed(spherosNames) { err in
                 if err == nil {
                     print("Connected to sphero")
-                    self.spheroIsConnected.toggle()
+                    self.spherosAreConnected = true
                 }
+            }
+            
+            let _ = SharedToyBox.instance.bolts.map{
+                print("connected to sphero : \($0.identifier)")
             }
         }
         .onChange(of: wsClient.receivedMessage) {
-            if spheroIsConnected && connectedToServer {
+            if spherosAreConnected && connectedToServer {
                 print("Received message from server: \(wsClient.receivedMessage)")
             }
         }

@@ -13,6 +13,7 @@ class SpheroRotationController {
     
     init(bolt: BoltToy? = nil) {
         self.bolt = bolt
+        self.bolt?.setMainLed(color: .blue)
     }
     
     func goFullSpeedAhead(duration: TimeInterval) {
@@ -46,3 +47,4 @@ class SpheroRotationController {
         bolt.setStabilization(state: .off)
     }
 }
+
