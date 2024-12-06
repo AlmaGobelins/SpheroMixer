@@ -8,7 +8,7 @@
 import SwiftUI
 
 class ShakeDetector {
-    private let shakeThreshold: Double = 0.3 // À ajuster selon la sensibilité souhaitée
+    private let shakeThreshold: Double = 0.9 // À ajuster selon la sensibilité souhaitée
     var bolt: BoltToy
     
     private var lastX: Double = 0.0

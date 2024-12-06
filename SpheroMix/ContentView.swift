@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var spherosNames: [String] = ["SB-A729", "SB-C7A8"] //SB-C7A8 - SB-42C1 - SB-A729
+    var spherosNames: [String] = ["SB-A729", "SB-C7A8"] //SB-C7A8 - SB-42C1 - SB-A729 - SB-2020
     @State private var spheroIsConnected: Bool = false
     @State private var displayView: Bool = false
     
