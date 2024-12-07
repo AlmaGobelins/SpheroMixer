@@ -16,7 +16,7 @@ struct SpheroControlView: View {
             Text("Contrôle mixeur")
                .font(.title)
                .padding()
-               .foregroundColor(.white)
+               .foregroundColor(.primary)
                .cornerRadius(10)
         }
         .padding()
