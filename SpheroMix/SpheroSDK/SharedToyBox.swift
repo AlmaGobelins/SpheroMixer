@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SharedToyBox {
+class SharedToyBox: ObservableObject {
     
     static let instance = SharedToyBox()
     
@@ -16,6 +16,9 @@ class SharedToyBox {
     var onGyroData: ((ThreeAxisSensorData<Int>) -> Void)?
     var onOrientationData: ((AttitudeSensorData) -> Void)?
     var onAccelerometerData: ((ThreeAxisSensorData<Double>) -> Void)?
+    
+    @Published var spheroNamesConnected: [String] = []
+    
     
     let box = ToyBox()
     var boltsNames = [String]()
@@ -67,6 +70,18 @@ extension SharedToyBox:ToyBoxListener{
         print("readied")
         if let b = toy as? BoltToy {
             print(b.peripheral?.name ?? "")
+            
+            
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                
+                // Ajout du Sphero connecté au tableau
+                if let name = b.peripheral?.name, !self.spheroNamesConnected.contains(name) {
+                    self.spheroNamesConnected.append(name)
+                    print("Sphero added: \(name). Current list: \(self.spheroNamesConnected)")
+                }
+            }
+            
             if let i = self.bolts.firstIndex(where: { (item) -> Bool in
                 item.identifier == b.identifier
             }){

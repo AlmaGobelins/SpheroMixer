@@ -19,10 +19,37 @@ class WebSocketClient: ObservableObject {
     static let shared:WebSocketClient = WebSocketClient()
     
     var routes = [String:NWWebSocket]()
+    var reconnectTimer: Timer?
+    private let reconnectInterval: TimeInterval = 5.0
+    
     var ipAdress: String = "192.168.0.115:8080"
     @Published var receivedMessage: String = ""
+    @Published var isConnected: Bool = false
+
+    private func startReconnectTimer(forRoute route: String) {
+        stopReconnectTimer()
+        
+        reconnectTimer = Timer.scheduledTimer(withTimeInterval: reconnectInterval, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            
+            if !self.isConnected {
+                print("Attempting to reconnect...")
+                _ = self.connectTo(route: route)
+            } else {
+                self.stopReconnectTimer()
+            }
+        }
+    }
+    
+    private func stopReconnectTimer() {
+        reconnectTimer?.invalidate()
+        reconnectTimer = nil
+    }
+
     
     func connectTo(route:String) -> Bool {
+        stopReconnectTimer()
+
         let socketURL = URL(string: "ws://\(ipAdress)/\(route)")
         if let url = socketURL {
             let socket = NWWebSocket(url: url, connectAutomatically: true)
@@ -37,18 +64,22 @@ class WebSocketClient: ObservableObject {
         return false
     }
     
+
+    
     func sendMessage(_ string: String, toRoute route:String) -> Void {
         self.routes[route]?.send(string: string)
     }
     
     func disconnect(route: String) -> Void {
         routes[route]?.disconnect()
+        stopReconnectTimer()
     }
     
     func disconnectFromAllRoutes() -> Void {
         for route in routes {
             route.value.disconnect()
         }
+        stopReconnectTimer()
         
         print("Disconnected from all routes.")
     }
@@ -80,6 +111,13 @@ extension WebSocketClient: WebSocketConnectionDelegate {
     func webSocketDidReceiveError(connection: WebSocketConnection, error: NWError) {
         // Respond to a WebSocket error event
         print("WebSocket error: \(error)")
+        DispatchQueue.main.async {
+            self.isConnected = false
+            // Start reconnection attempts for the disconnected route
+            if let route = self.routes.first(where: { $0.value === connection as? NWWebSocket })?.key {
+                self.startReconnectTimer(forRoute: route)
+            }
+        }
     }
 
     func webSocketDidReceivePong(connection: WebSocketConnection) {
@@ -91,6 +129,15 @@ extension WebSocketClient: WebSocketConnectionDelegate {
         // Respond to a WebSocket connection receiving a `String` message
         print("WebSocket received message: \(string)")
         self.receivedMessage = string
+        
+        if string == "ping" {
+            self.sendMessage("pong", toRoute: "phoneMix")
+        }
+        
+        if string == "mix" {
+            self.sendMessage("pong", toRoute: "phoneMix")
+        }
+
     }
 
     func webSocketDidReceiveMessage(connection: WebSocketConnection, data: Data) {
