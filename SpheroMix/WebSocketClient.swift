@@ -22,10 +22,11 @@ class WebSocketClient: ObservableObject {
     var reconnectTimer: Timer?
     private let reconnectInterval: TimeInterval = 5.0
     
-    var ipAdress: String = "192.168.0.115:8080"
+    var ipAdress: String = "192.168.0.166:8080"
     @Published var receivedMessage: String = ""
     @Published var isConnected: Bool = false
-
+    @Published var toggleMix: Bool = false
+    
     private func startReconnectTimer(forRoute route: String) {
         stopReconnectTimer()
         
@@ -134,8 +135,11 @@ extension WebSocketClient: WebSocketConnectionDelegate {
             self.sendMessage("pong", toRoute: "phoneMix")
         }
         
+
         if string == "mix" {
-            self.sendMessage("pong", toRoute: "phoneMix")
+            DispatchQueue.main.async {
+                self.toggleMix = true
+            }
         }
 
     }
